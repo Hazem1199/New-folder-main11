@@ -1,0 +1,136 @@
+async function showGroup(id) {
+  const students = await getInfoGroup(id);
+  const tableBody = document.querySelector('.tbody2');
+
+  // Remove all existing rows from the table
+  while (tableBody.firstChild) {
+    tableBody.removeChild(tableBody.firstChild);
+  }
+
+  // Create spinner element
+  const spinner = document.createElement('div');
+  spinner.classList.add('spinner');
+  document.body.appendChild(spinner);
+
+  let totalDoneModules = 0;
+  let moduleCount = 0;
+  let i;
+
+  for (i = 1; i <= 12; i++) {
+    students.forEach(student => {
+      if (student[`g${i} module`] && new Date(student[`g${i} date`]) < new Date()) {
+        const date = new Date(student[`g${i} date`]);
+        const options = { year: 'numeric', month: 'short', day: 'numeric' };
+        const formattedDate = date.toLocaleDateString(undefined, options);
+        const newRow = document.createElement('tr');
+        const moduleCell = document.createElement('td');
+        const groupCell = document.createElement('td');
+        const dateCell = document.createElement('td');
+        newRow.appendChild(groupCell);
+        newRow.appendChild(moduleCell);
+        newRow.appendChild(dateCell);
+        moduleCell.textContent = student[`g${i} module`];
+        groupCell.textContent = student[`g${i}`];
+        dateCell.textContent = formattedDate;
+        tableBody.appendChild(newRow);
+        moduleCount++;
+        if (student[`g${i} date`]) {
+          totalDoneModules++;
+        }
+      }
+    });
+  }
+
+  // Hide spinner element
+  document.body.removeChild(spinner);
+
+  // Update the module count
+  const moduleCountElement = document.getElementById('moduleCount');
+  moduleCountElement.textContent = `${totalDoneModules} / ${moduleCount}`;
+
+  // Update the footer based on the next module deadline
+  const filteredModules = students.filter(student => {
+    const date = new Date(student[`g${i} date`]);
+    return date >= new Date();
+  });
+  const nextModule = filteredModules.sort((a, b) => new Date(a[`g${i} date`]) - new Date(b[`g${i} date`]))[0];
+  if (nextModule) {
+    const formattedDueDate = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric' }).format(new Date(nextModule[`g${i} date`]));
+    footer4.textContent = `Next deadline: ${formattedDueDate}`;
+  } else {
+    footer4.textContent = 'No upcoming deadlines';
+  }
+}
+
+
+
+
+
+
+<div class="card text-center mx-2" style="width: 18rem">
+                <img
+                  src="/imgs/srm.jpg"
+                  style="height: 200px"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">SRM V-5</h5>
+                </div>
+                <div style="display: flex; justify-content: center">
+                  <mark style="width: 90%; border-radius: 10px; font-size: 14px"
+                    ><q>Using It by Coord Email</q></mark
+                  >
+                </div>
+
+                <div class="card-body">
+                  <a
+                    href="https://www.appsheet.com/start/7b8da226-47b1-41e7-893d-1bfe8c01173e?platform=desktop#viewStack[0][identifier][Type]=Control&viewStack[0][identifier][Name]=SRM&appName=BrooklynSRM-880291567"
+                    class="card-link btn btn-primary"
+                    target="_blank"
+                    >Use It</a
+                  >
+                  <button
+                    class="card-link btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    <i class="fa fa-video-camera" aria-hidden="true"></i>
+                  </button>
+
+                  <div
+                    class="modal fade"
+                    id="exampleModal"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="alertMsg"></div>
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body">
+                          <iframe
+                            src="https://drive.google.com/file/d/1d7Ewc86NGsk9KV4UrAa2ed23RFIZkKzq/preview"
+                            width="450"
+                            height="315"
+                            frameborder="0"
+                            allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                          ></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+

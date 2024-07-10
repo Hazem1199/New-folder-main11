@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="./bootstrap-5.2.3-dist/css/bootstrap.min.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/vue3-toastify@0.1.12/dist/index.css" rel="stylesheet" />
+
+  <link href="node_modules/froala-editor/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+
+
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@syncfusion/ej2-vue-richtexteditor@25.2.7/styles/bootstrap-dark.min.css">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/brands.min.css"
+    integrity="sha512-L+sMmtHht2t5phORf0xXFdTC0rSlML1XcraLTrABli/0MMMylsJi3XA23ReVQkZ7jLkOEIMicWGItyK4CAt2Xw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/css/framework.css" />
+  <link rel="stylesheet" href="/css/master.css" />
+  <title>One Time Task</title>
+</head>
+
+<body>
+  <div id="app" class="page ">
+
+    <!-- sidebar -->
+    <div class="d-flex">
+      <div class="sidebar">
+        <div class="logo_details">
+          <img class="icon" src="./imgs/bb_-_logo-removebg-preview.png" alt="brooklyn" />
+          <!-- <div class="logo_name">Brooklyn</div> -->
+          <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <ul class="nav-list">
+          <li>
+            <a href="./SRM.html">
+              <i class="bx bx-grid-alt"></i>
+              <span class="link_name">Srm</span>
+            </a>
+            <span class="tooltip">Srm</span>
+          </li>
+          <!-- <li>
+          <a href="#">
+            <i class="bx bx-user"></i>
+            <span class="link_name">User</span>
+          </a>
+          <span class="tooltip">User</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-chat"></i>
+            <span class="link_name">Message</span>
+          </a>
+          <span class="tooltip">Message</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-pie-chart-alt-2"></i>
+            <span class="link_name">Analytics</span>
+          </a>
+          <span class="tooltip">Analytics</span>
+        </li> -->
+          <!-- <li>
+          <a href="#">
+            <i class="bx bx-folder"></i>
+            <span class="link_name">File Manger</span>
+          </a>
+          <span class="tooltip">File Manger</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-cart-alt"></i>
+            <span class="link_name">Order</span>
+          </a>
+          <span class="tooltip">Order</span>
+        </li> -->
+          <!-- <li>
+          <a href="#">
+            <i class="bx bx-cog"></i>
+            <span class="link_name">Settings</span>
+          </a>
+          <span class="tooltip">Settings</span>
+        </li> -->
+          <a href="./index.html" class="log_out">
+            <li class="profile">
+              <div class="profile_details">
+                <!-- <img src="profile.jpg" alt="profile image"> -->
+                <div class="profile_content">
+                  <div class="name"></div>
+                  <div class="designation"></div>
+                </div>
+              </div>
+              <i class="bx bx-log-out" id="log_out"></i>
+            </li>
+          </a>
+        </ul>
+      </div>
+
+
+      <div class="content w-full">
+        <!--start head  -->
+        <div class="head p-15 bg-white between-flex">
+          <form class="searchCon">
+            <div class="alertMsg"></div>
+          </form>
+
+          <div class="icons d-flex align-center">
+            <span class="notification p-relative">
+              <i class="fa-regular fa-bell fa-lg"></i>
+            </span>
+            <img src="./imgs/IMG_8222.png" alt="person" />
+          </div>
+        </div>
+        <!-- <h1 class="p-relative">Profile</h1> -->
+        <div class="profile-page m-20">
+
+          <!--start massages -->
+          <div v-if="successMsg" class="alert alert-success w-50 mx-auto"><strong>Success!</strong> task Added
+            successfully.</div>
+          <div v-if="errorMsg" class="alert alert-success"><strong>Error!</strong> task Added failed.</div>
+
+          <div v-if="successMsgReply" class="alert alert-success w-50 mx-auto"><strong>Success!</strong> task Added
+            successfully.</div>
+          <div v-if="errorMsgReply" class="alert alert-success"><strong>Error!</strong> task Added failed.</div>
+
+          <!-- End massages -->
+
+          <!-- Start Overview -->
+
+          <!-- End Overview -->
+          <!-- Start Other Data -->
+
+          <div class="d-flex w-100 createProject">
+            <h2 class="mt-2 mb-1 mx-4 fw-bold">Tasks</h2>
+            <!-- Add task btn  -->
+            <button type="button" class="btn button mx-1" data-bs-toggle="modal" data-bs-target="#taskNameModal">
+
+              <iconify-icon class="qrIcon mx-1" icon="bi:plus-circle" width="25" height="25"></iconify-icon>
+            </button>
+
+            <div class="d-flex justify-content-center align-items-center w-25" style="margin-left:250px ;">
+              <form id="searchForm" @keyup.prevent="filterTask">
+                <input type="text" class="form-control" v-model="search" placeholder="search Task ...">
+              </form>
+            </div>
+
+          </div>
+
+          <div class="activities p-20 bg-white rad-10 mt-20 d-flex">
+            <div>
+              <Sidbar @filtertask="onFlterTask" />
+            </div>
+
+            <div class="w-full">
+              <div class="box">
+
+                <!-- <button id="openPopupButton">Add Complaint</button> -->
+                <div id="popupContainer">
+                  <div id="popup">
+                    <form id="myForm">
+                      <label for="inputField">Deadline :</label>
+                      <input type="text" id="Complaint" name="Complaint" />
+
+                      <br />
+                      <input type="submit" value="Submit" />
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- card of ditals -->
+
+              <!-- end cards of ditals -->
+
+              <div class="activities rad-10" style="padding: 0 20px 20px 20px;">
+
+                <div class="main d-flex justify-content-around"></div>
+                <!--  loading -->
+                <p class="card-text placeholder-glow d-none">
+                  <a class="btn btn-primary disabled placeholder col-12 my-2" aria-disabled="false"></a>
+                  <a class="btn btn-primary disabled placeholder col-12 my-2" aria-disabled="false"></a>
+                  <a class="btn btn-primary disabled placeholder col-12 my-2" aria-disabled="false"></a>
+                </p>
+                <!-- v-if="task.attributes.assign_to == state.user" -->
+                <!-- end loading -->
+                <div class="accordion" id="accordionOneTimeTasks">
+                  <div v-for="task in filterTask" :key="task.id">
+                    <div class="accordion-item mb-1"
+                      v-if="task.attributes.assign_to == state.user || task.attributes.taskOwner == state.user || task.attributes.supervisor == state.user">
+                      <h2 class="accordion-header d-flex justify-content-between">
+
+                        <button class="btn mx-1" style="text-decoration: none; color: inherit;"
+                          @click="starTask(task.id , task.attributes.taskOwner , task.attributes.assign_to , task.attributes.supervisor)">
+                          <i class="far fa-star mx-2 "
+                            :class="{ 'text-warning fa star fa-lg' : (task.attributes.is_assign_star && task.attributes.assign_to == state.user) 
+                                                                  || (task.attributes.is_super_star && task.attributes.supervisor == state.user) 
+                                                                  || (task.attributes.is_owner_star &&  task.attributes.taskOwner == state.user) , 
+                            'text-secondary far fa-star': (!task.attributes.is_assign_star &&  task.attributes.assign_to == state.user) 
+                                                      || (!task.attributes.is_super_star &&  task.attributes.supervisor == state.user) 
+                                                      || (!task.attributes.is_owner_star &&  task.attributes.taskOwner == state.user)}"></i>
+                        </button>
+
+                        <button class=" accordion-button fw-semibold position-relative" type="button"
+                          data-bs-toggle="collapse" :data-bs-target="'#oneTimeTask' + task.id" aria-expanded="true"
+                          :aria-controls="'oneTimeTask' + task.id">
+                          <p class="mb-0" style="direction: rtl;">{{ task.attributes.name }}</p>
+                          <i v-if="task.attributes.isDone" class="fa-solid fa-circle-check mx-2 text-success"></i>
+                          <div class="d-flex">
+                            <div v-if="task.attributes.project"
+                              class="btn  position-absolute btn-outline-secondary fw-semibold" style="
+                                                --bs-btn-padding-y: 0.25rem;
+                                                --bs-btn-padding-x: 0.5rem;
+                                                --bs-btn-font-size: 0.75rem;
+                                                --bs-btn-border-radius: 0.25rem;
+                                                --bs-link-hover-color-rgb: 0, 0, 0;
+                                                bottom: 25%;
+                                                right: 5%;
+                                                background-color: beige;
+                                              " type="">
+                              {{ task.attributes.project }}
+                            </div>
+
+                            <div v-if="task.attributes.is_star"
+                              class="btn  position-absolute btn-outline-secondary fw-semibold text-light" style="
+                                                                          --bs-btn-padding-y: 0.25rem;
+                                                                          --bs-btn-padding-x: 0.5rem;
+                                                                          --bs-btn-font-size: 0.75rem;
+                                                                          --bs-btn-border-radius: 0.25rem;
+                                                                          --bs-link-hover-color-rgb: 0, 0, 0;
+                                                                          bottom: 25%;
+                                                                          right: 18%;
+                                                                          background-color: lightcoral;
+                                                                        " type="">
+                              In Review
+                            </div>
+                          </div>
+                        </button>
+                        <div class="d-flex">
+
+                          <!-- <button tooltip="Edit" title="Edit" class="btn mx-1" @click="editOneTimeTask(task.id)"
+                      data-bs-toggle="modal" data-bs-target="#taskEditModal">
+                      <i class="fas fa-edit fa-lg"></i>
+                    </button> -->
+                          <!-- <i class="fa-solid fa-arrows-rotate"></i> -->
+
+
+                          <button tooltip="Archive" data-bs-toggle="tooltip" data-bs-placement="top"
+                            :data-bs-title="task.attributes.is_assign_archive || task.attributes.is_owner_archive || task.attributes.is_super_archive ? 'Restore' : 'Archive'"
+                            class="btn mx-1"
+                            @click="trashShow[task.id] = false; restoreShow[task.id] = false; spinnerShowIds[task.id] = true; archivetask(task.id , task.attributes.taskOwner , task.attributes.assign_to , task.attributes.supervisor);">
+                            <i aria-hidden="true" :class="{ 'text-primary fa-solid fa-arrows-rotate fa-lg' :   (task.attributes.is_assign_archive == true && task.attributes.assign_to == state.user)
+              || (task.attributes.is_owner_archive == true && task.attributes.taskOwner == state.user)
+              || (task.attributes.is_super_archive == true && task.attributes.supervisor == state.user),
+                                        'text-secondary fa fa-archive fa-lg':  (!task.attributes.is_assign_archive  && task.attributes.assign_to == state.user)
+              || (!task.attributes.is_owner_archive  && task.attributes.taskOwner == state.user)
+              || (!task.attributes.is_super_archive  && task.attributes.supervisor == state.user)
+                                                                          
+                                                                          &&  !spinnerShowIds[task.id] }"></i>
+                            <span class="spinner-border spinner-border-sm ms-2"
+                              :class="{ 'd-none': !spinnerShowIds[task.id] }" role="status" aria-hidden="true"
+                              @animationend="spinnerShowIds[task.id] = false"></span>
+                          </button>
+                        </div>
+                      </h2>
+                      <div :id="'oneTimeTask' + task.id" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionOneTimeTasks">
+                        <div class="accordion-body">
+                          <div class="card-body">
+                            <div class="d-flex flex-column">
+                              <p class="Description fw-normal mx-2" style="direction: rtl; text-align: end">
+                                {{ task.attributes.description }}
+                              </p>
+                            </div>
+                          </div>
+                          <div class="d-flex">
+                            <div class="mx-2" v-if="task.attributes.deadline || task.attributes.start">
+                              <div class="btn btn-secondary d-flex" style="
+                            --bs-btn-padding-y: 0.25rem;
+                            --bs-btn-padding-x: 0.5rem;
+                            --bs-btn-font-size: 0.75rem;
+                          " type="">
+                                <p v-if="task.attributes.start" class="mb-0 fw-normal">Start at: {{
+                                  formatDate(task.attributes.start) }} - </p>
+                                <p v-if="task.attributes.deadline" class="mb-0 fw-normal">Deadline: {{
+                                  formatDate(task.attributes.deadline) }}</p>
+                              </div>
+                            </div>
+                            <div class="mx-2" v-if="task.attributes.assign_to">
+                              <div class="btn btn-secondary" style="
+                            --bs-btn-padding-y: 0.25rem;
+                            --bs-btn-padding-x: 0.5rem;
+                            --bs-btn-font-size: 0.75rem;
+                          " type="">
+                                Assign to: {{ task.attributes.assign_to }}
+                              </div>
+                            </div>
+                            <div class="mx-2" v-if="task.attributes.supervisor">
+                              <div class="btn btn-secondary" style="
+                                                --bs-btn-padding-y: 0.25rem;
+                                                --bs-btn-padding-x: 0.5rem;
+                                                --bs-btn-font-size: 0.75rem;
+                                              " type="">
+                                Supervisor: {{ task.attributes.supervisor }}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="my-2 mx-4">
+                          <button type="button" class="btn btn-outline-secondary" @click="commentShow = !commentShow;"
+                            data-mdb-button-init="true" data-mdb-ripple-init="true">
+                            <i class="fas fa-reply me-2"></i>Comments </button>
+                        </div>
+                        <!-- <button @click=" notify">show toast</button> -->
+
+                        <!-- Comment section -->
+
+                        <section v-if="commentShow">
+                          <div class="container py-1">
+                            <div class="row d-flex justify-content-center">
+                              <div class="col-md-12 col-lg-10 col-xl-12">
+                                <div class="card">
+                                  <div v-for="comment in state.comments" :key="comment.id"
+                                    :class="{'d-none ': !comment.attributes.comment , 'd-block': comment.attributes.comment }">
+                                    <!-- <hr v-show="hrShow" class="my-0 mx-auto"
+                                      :class="{'d-none': !comment.attributes.comment}" /> -->
+                                    <div class="card-body my-1 mx-3"
+                                      style="border-radius: 20px; border: #e9ecee 1px solid; background-color: #F1F5F9;"
+                                      v-show="comment.attributes.taskID == task.id ">
+                                      <div>
+                                        <div class="d-flex flex-start align-items-center">
+                                          <!-- <img class="rounded-circle shadow-1-strong me-3"
+                                        src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(19).webp" alt="avatar"
+                                        width="60" height="60" /> -->
+                                          <div class="d-flex flex-row w-100 ps-2 pt-1 fw-semibold">
+                                            <h6 class="fw-bold text-primary mb-1">{{ comment.attributes.user }}</h6>
+                                            <p class="text-muted small mb-0 fw-normal mx-2">
+                                              {{ formatDateTime(comment.attributes.createdAt) }}
+                                            </p>
+                                          </div>
+                                        </div>
+
+                                        <p class="my-1 mx-2" style="direction: rtl; text-align: end">
+                                          {{ comment.attributes.comment }}
+                                        </p>
+
+                                        <!-- <div v-if="comment.attributes.attach" class="my-1 mx-2"
+                                          style="direction: rtl; text-align: end">
+                                          {{ comment.attributes.attach.data }}
+                                        </div> -->
+                                        <!-- <div class="small d-flex justify-content-start">
+                                        <a href="#!" class="d-flex align-items-center me-3">
+                                        <i class="far fa-thumbs-up me-2"></i>
+                                        <p class="mb-0">Like</p>
+                                        </a>
+                                        <a href="#!" class="d-flex align-items-center me-3">
+                                        <i class="far fa-comment-dots me-2"></i>
+                                        <p class="mb-0">Comment</p>
+                                        </a>
+                                        < a href="#!" class="d-flex align-items-center me-3">
+                                        <i class="fas fa-share me-2"></i>
+                                        <p class="mb-0">Share</p>
+                                        </a>-->
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-footer py-3 border-0" style="background-color: #e3e7eb00;">
+                                  <form @submit.prevent="postComment(task.id); commentValue.comment = '';">
+                                    <div class="d-flex flex-start w-100">
+                                      <!-- <img class="rounded-circle shadow-1-strong me-3"
+                                        src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(19).webp" alt="avatar"
+                                        width="40" height="40" /> -->
+                                      <div data-mdb-input-init class="form-outline mx-3" style="width: 97%;">
+                                        <textarea class="form-control " id="textAreaExample" rows="1"
+                                          v-model="commentValue.comment" placeholder="Leave a comment"
+                                          style="background: #fff;"></textarea>
+                                      </div>
+                                    </div>
+                                    <!--<div class="d-flex justify-content-end mt-3">
+                                       <div class=" mx-2">
+                                        <input class="form-control me-2" type="file" @change="handleFileUpload"
+                                          ref="fileInput" />
+                                         <button class="btn btn-outline-secondary btn-sm mt-3" @click="uploadFile">
+                                          <i class="bi bi-upload"></i> Upload File
+                                        </button> -->
+                                    <!-- <p v-if="error" class="text-danger ms-2">{{ error }}</p>
+                                      <p v-if="successMessage" class="text-success ms-2">{{ successMessage }}</p>
+                                    </div> -->
+                                    <div class="float-end  me-3 pt-1 ">
+                                      <button
+                                        v-show="task.attributes.taskOwner == state.user && task.attributes.is_star"
+                                        type="button" @click="doneTask(task.id , task.attributes.taskOwner)"
+                                        class="btn btn-primary btn-sm mx-1">
+                                        Done
+                                      </button>
+
+                                      <button
+                                        v-show=" task.attributes.is_star && task.attributes.taskOwner == state.user || task.attributes.isDone && task.attributes.taskOwner == state.user"
+                                        type="button" @click="reworkTask(task.id , task.attributes.taskOwner)"
+                                        class="btn btn-primary btn-sm mx-1">
+                                        Rework & Reply
+                                      </button>
+
+                                      <button
+                                        v-show="task.attributes.assign_to == state.user || task.attributes.supervisor == state.user "
+                                        v-if="!task.attributes.is_star && task.attributes.taskOwner != state.user && !task.attributes.isDone"
+                                        type="button"
+                                        @click="reviewTask(task.id , task.attributes.assign_to , task.attributes.supervisor)"
+                                        class="btn btn-primary btn-sm mx-1">
+                                        Review & Reply
+                                      </button>
+
+                                      <button type="submit"
+                                        :class="{'btn-primary':commentvalid,'btn-secondary':!commentvalid}"
+                                        class="btn btn-primary btn-sm mx-1" :disabled="!commentvalid">
+                                        Reply
+                                      </button>
+                                      <!-- <button type="button" data-mdb-button-init data-mdb-ripple-init
+                                        class="btn btn-outline-primary btn-sm">Cancel</button>
+                                      </div> -->
+                                    </div>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+
+                        <!-- comment section -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="main d-flex justify-content-around mt-10">
+
+                  <!-- End Other Data -->
+                  <!-- loading -->
+                  <div class="loading-div">
+                    <div class="loadingio-spinner-double-ring-h4svqtjo686">
+                      <div class="ldio-fm0nm98m936">
+                        <div></div>
+                        <div></div>
+                        <div>
+                          <div></div>
+                        </div>
+                        <div>
+                          <div></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Other Data -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- start modal for create task -->
+    <div class="modal fade" id="taskNameModal" tabindex="-1" data-bs-keyboard="false"
+      aria-labelledby="taskNameModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="taskNameModalLabel">Create task</h5><button type="button" class="btn-close"
+              data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form @submit.prevent="postData">
+              <div class="mb-3">
+                <label class="form-label" for="taskName">Task</label>
+                <input v-model="formValue.name" type="text" id="taskName" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="taskDescription">Description</label>
+                <textarea v-model="formValue.description" type="text" id="taskDescription" class="form-control"
+                  required> </textarea>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="taskProject">Project List</label>
+                <select v-model="formValue.project" id="taskProject" class="form-select" required>
+                  <option value="" selected="">Select a project</option>
+                  <option v-for="project in state.projects" :value="project.name">{{ project.name }}
+                  </option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="taskEmp">Assign to</label>
+                <select v-model="formValue.emp" id="taskEmp" class="form-select" required>
+                  <option value="" selected="">Select a Employee</option>
+                  <option v-for="emp in state.emps" :value="emp.code">{{ emp.code }}
+                  </option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="taskSupervisor">Supervisor</label>
+                <select v-model="formValue.supervisor" id="taskSupervisor" class="form-select" required>
+                  <option value="" selected="">Select a Supervisor</option>
+                  <option v-for="emp in state.emps" :value="emp.code">{{ emp.code }}
+                  </option>
+                </select>
+              </div>
+              <button type="button" @click="advancedSettingShow = !advancedSettingShow" id="advancedButton"
+                class="btn btn-outline-sec3ondary btn-sm mt-3">Advanced Setting</button>
+              <div v-if="advancedSettingShow" class="advancedOptions">
+                <div class="mb-3">
+                  <label class="form-label" for="taskFrom">From</label>
+                  <input v-model="formValue.start" type="datetime-local" id="taskFrom" class="form-control">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="taskTo">To (Deadline)</label>
+                  <input v-model="formValue.deadline" type="datetime-local" id="taskTo" class="form-control">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <div class="d-flex justify-content-center">
+                  <div class="btn-group" role="group" aria-label="taskModalButtonGroup"> <button type="submit"
+                      :data-bs-dismiss="formvalid?'modal':''" class="btn" :disabled="!formvalid"
+                      :class="{'btn-primary':formvalid,'btn-secondary':!formvalid}" id="createButton">Create<span
+                        class="spinner-border spinner-border-sm ms-2" :class="{ 'd-none': !spinnerShow }" role="status"
+                        aria-hidden="true"></span></button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- end modal  -->
+
+    <!-- start modal for Edit task -->
+    <!-- <div class="modal fade" id="taskEditModal" data-bs-keyboard="false" aria-labelledby="taskEditModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="taskEditModalLabel">Create task</h5><button type="button" class="btn-close"
+            data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form @submit.prevent="postData">
+            <div class="mb-3">
+              <label class="form-label" for="taskName">Name</label>
+              <input v-model="formValue.name" type="text" id="taskName" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="taskDescription">Description</label>
+              <input v-model="formValue.description" type="text" id="taskDescription" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="taskProject">Project List</label>
+              <select v-model="formValue.project" id="taskProject" class="form-select" required>
+                <option value="" selected="">Select a project</option>
+                <option v-for="project in state.projects" :value="project.name">{{ project.name }}
+                </option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="taskEmp">Assign to</label>
+              <select v-model="formValue.emp" id="taskEmp" class="form-select" required>
+                <option value="" selected="">Select a Employee</option>
+                <option v-for="emp in state.emps" :value="emp.code">{{ emp.code }}
+                </option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="taskSupervisor">Supervisor</label>
+              <select v-model="formValue.supervisor" id="taskSupervisor" class="form-select" required>
+                <option value="" selected="">Select a Supervisor</option>
+                <option v-for="emp in state.emps" :value="emp.code">{{ emp.code }}
+                </option>
+              </select>
+            </div>
+            <button type="button" @click="advancedSettingShow = !advancedSettingShow" id="advancedButton"
+              class="btn btn-outline-sec3ondary btn-sm mt-3">Advanced Setting</button>
+            <div v-if="advancedSettingShow" class="advancedOptions">
+              <div class="mb-3">
+                <label class="form-label" for="taskFrom">From</label>
+                <input v-model="formValue.start" type="datetime-local" id="taskFrom" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="taskTo">To</label>
+                <input v-model="formValue.deadline" type="datetime-local" id="taskTo" class="form-control">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <div class="d-flex justify-content-center">
+                <div class="btn-group" role="group" aria-label="taskModalButtonGroup"> <button type="submit"
+                    :data-bs-dismiss="formvalid?'modal':''" class="btn" :disabled="!formvalid"
+                    :class="{'btn-primary':formvalid,'btn-secondary':!formvalid}" id="createButton">Create<span
+                      class="spinner-border spinner-border-sm ms-2" :class="{ 'd-none': !spinnerShow }" role="status"
+                      aria-hidden="true"></span></button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+    <!-- end modal  -->
+
+
+
+  </div>
+
+
+
+
+  <script src="./bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+  <script src="./bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+
+  <script src="/js pages/oneTimeTask.js" type="module"></script>
+</body>
+
+</html>

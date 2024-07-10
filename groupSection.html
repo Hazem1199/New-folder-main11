@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="./bootstrap-5.2.3-dist/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/brands.min.css"
+    integrity="sha512-L+sMmtHht2t5phORf0xXFdTC0rSlML1XcraLTrABli/0MMMylsJi3XA23ReVQkZ7jLkOEIMicWGItyK4CAt2Xw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/css/framework.css">
+  <link rel="stylesheet" href="/css/master.css">
+  <title>Dashboard</title>
+</head>
+
+<body cz-shortcut-listen="true">
+  <div class="page d-flex">
+    <!-- sidebar -->
+    <div class="sidebar">
+      <div class="logo_details">
+        <img class="icon" src="./imgs/bb_-_logo-removebg-preview.png" alt="brooklyn">
+        <!-- <div class="logo_name">Brooklyn</div> -->
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <a href="./SRM.html">
+            <i class="bx bx-grid-alt"></i>
+            <span class="link_name">Srm</span>
+          </a>
+          <span class="tooltip">Srm</span>
+        </li>
+        <!-- <li>
+          <a href="#">
+            <i class="bx bx-user"></i>
+            <span class="link_name">User</span>
+          </a>
+          <span class="tooltip">User</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-chat"></i>
+            <span class="link_name">Message</span>
+          </a>
+          <span class="tooltip">Message</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-pie-chart-alt-2"></i>
+            <span class="link_name">Analytics</span>
+          </a>
+          <span class="tooltip">Analytics</span>
+        </li> -->
+        <!-- <li>
+          <a href="#">
+            <i class="bx bx-folder"></i>
+            <span class="link_name">File Manger</span>
+          </a>
+          <span class="tooltip">File Manger</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-cart-alt"></i>
+            <span class="link_name">Order</span>
+          </a>
+          <span class="tooltip">Order</span>
+        </li> -->
+        <!-- <li>
+          <a href="#">
+            <i class="bx bx-cog"></i>
+            <span class="link_name">Settings</span>
+          </a>
+          <span class="tooltip">Settings</span>
+        </li> -->
+        <a href="./index.html" class="log_out">
+          <li class="profile">
+            <div class="profile_details">
+              <!-- <img src="profile.jpg" alt="profile image"> -->
+              <div class="profile_content">
+                <div class="name"></div>
+                <div class="designation"></div>
+              </div>
+            </div>
+            <i class="bx bx-log-out" id="log_out"></i>
+          </li>
+        </a>
+      </ul>
+    </div>
+    <div class="content w-full">
+      <!--start head  -->
+      <div class="head p-15 bg-white between-flex">
+        <form class="searchCon">
+          <div class="alertMsg"></div>
+          <div class="search p-relative">
+            <input style="border-radius: 40px 0px 0px 40px;" class="rad-15" type="search" id="searchGroup" name="search"
+              placeholder="Write ID....">
+          </div>
+          <div class="search-container">
+            <button type="submit" class="search-button searchGroupBtn"><i class="fa fa-search"></i></button>
+          </div>
+        </form>
+        <div class=" d-flex align-center flex-grow-1 mx-1 ">
+          <iconify-icon class="mx-1 copyIcon" icon="bi:copy" width="20" height="20" data-toggle="tooltip"
+            data-placement="top" title="Copy Link of Group"></iconify-icon>
+          <!-- <input type="text" id="textToCopy" readonly > -->
+        </div>
+        <div class="icons d-flex align-center">
+          <span class="notification p-relative">
+            <i class="fa-regular fa-bell fa-lg"></i>
+          </span>
+          <img src="./imgs/IMG_8222.png" alt="person">
+        </div>
+      </div>
+      <!-- <h1 class="p-relative">Profile</h1> -->
+      <div class="profile-page m-20">
+        <!-- Start Overview -->
+
+        <!-- End Overview -->
+        <!-- Start Other Data -->
+
+        <div class="activities p-20 bg-white rad-10 mt-20">
+          <div class="box">
+            <div class="d-flex  w-100">
+              <h2 class="mt-2 mb-1 mx-4 fw-bold">Groups</h2>
+
+
+              <!-- sms btn  -->
+              <button id="smsBtnG" data-bs-toggle="modal" data-bs-target="#groupsms" type="submit"
+                class="btn button mx-1"><iconify-icon class="qrIcon mx-1" icon="bi:chat-square-text" width="23"
+                  height="23"></iconify-icon>
+                <p class="mb-0">SMS</p>
+              </button>
+
+              <div class="modal fade" id="groupsms" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Please Fillfull All Inputs
+                      </h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                      <form method="POST" id="frmSmsGroup">
+                        <div class="form-group form-floating mb-3 frmDiv ">
+
+
+                          <div class="form-group form-floating mt-3" style="display:none ;">
+                            <input name="Employee" type="text" id="smsEmployee" class="form-control">
+                            <label for="smsEmployee">Employee</label>
+                          </div>
+                        </div>
+
+                        <div class="form-group form-floating" style="display:none ;">
+                          <input name="Group Num" type="number" placeholder="Student Num" id="smsGroupNum"
+                            class="form-control">
+                          <label for="smsGroupNum">Student Num</label>
+                        </div>
+
+
+                        <div class="form-group form-floating" style="display:none ;">
+                          <input name="Timestamp" type="text" placeholder="Student Num" id="smsTimestamp"
+                            class="form-control">
+                          <label for="smsTimestamp">Student Nu m</label>
+                        </div>
+
+                        <div class="form-floating mt-3">
+                          <select class="form-select" id="SmsSelect">
+                            <!-- code come from iterate -->
+                            <option selected></option>
+                            <option value="call me">call me </option>
+                          </select>
+                          <label for="SmsSelect">select Sms</label>
+                        </div>
+
+
+                        <div class="form-group mt-3 form-floating">
+                          <textarea name="Sms" class="form-control" placeholder="Nots" id="smsTextarea" rows="10"
+                            required></textarea>
+                          <label for="smsTextarea" class="form-label">Write Sms</label>
+                        </div>
+
+
+                        <div class="my-3">
+                          <div class="error-message"></div>
+                          <div dir="ltr" class="sent-message text-center alert alert-success d-none"></div>
+
+                        </div>
+                        <div class="d-flex justify-content-center mt-3">
+                          <button class="btn btn-primary scrollto btn-info text-light d-flex smsBtn" type="submit">
+                            Send
+                            <div id="spinner-container"></div>
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- email btn  -->
+              <div class="d-flex  flex-grow-1">
+                <button id="emailBtnG" data-bs-toggle="modal" data-bs-target="#groupEmail" type="submit"
+                  class="btn button mx-1"><iconify-icon class="qrIcon mx-1" icon="bi:envelope" width="23"
+                    height="23"></iconify-icon>
+                  <p class="mb-0">Email</p>
+                </button>
+
+                <div class="modal fade" id="groupEmail" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Please Fillfull All Inputs
+                        </h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+
+                        <form method="POST" id="frmEmailGroup">
+                          <div class="form-group form-floating mb-3 frmDiv ">
+
+
+                            <div class="form-group form-floating mt-3" style="display:none ;">
+                              <input name="Employee" type="text" id="emailEmployee" class="form-control">
+                              <label for="emailEmployee">Employee</label>
+                            </div>
+                          </div>
+
+                          <div class="form-group form-floating" style="display:none ;">
+                            <input name="Group Num" type="number" placeholder="Student Num" id="emailGroupNum"
+                              class="form-control">
+                            <label for="emailGroupNum">Student Num</label>
+                          </div>
+
+
+                          <div class="form-group form-floating" style="display:none ;">
+                            <input name="Timestamp" type="text" placeholder="Student Num" id="emailTimestamp"
+                              class="form-control">
+                            <label for="emailTimestamp">Student Num</label>
+                          </div>
+
+                          <div class="form-floating mt-3">
+                            <select class="form-select" id="EmailSelectG">
+                              <!-- code come from iterate -->
+                              <option selected></option>
+                              <option value="call me">call me </option>
+                            </select>
+                            <label for="EmailSelectG">select Email</label>
+                          </div>
+
+                          <div class="form-group mt-3 form-floating">
+                            <input name="Subject" class="form-control" placeholder="Nots" id="EmailSubject" rows="10"
+                              required></input>
+                            <label for="EmailSubject" class="form-label">Subject</label>
+                          </div>
+
+
+                          <div class="form-group mt-3 form-floating">
+                            <textarea name="Email" class="form-control" placeholder="Nots" id="EmailTextarea" rows="10"
+                              required></textarea>
+                            <label for="EmailTextarea" class="form-label">Email</label>
+                          </div>
+
+
+                          <div class="my-3">
+                            <div class="error-message"></div>
+                            <div dir="ltr" class="sent-message text-center alert alert-success d-none" id="msg"></div>
+
+                          </div>
+                          <div class="d-flex justify-content-center mt-3">
+                            <button class="btn btn-primary scrollto btn-info text-light d-flex emailBtn" type="submit">
+                              Submit
+                              <div id="spinner-emmailG"></div>
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- print group -->
+                <form method="POST" id="printG" class="d-flex mx-3">
+                  <button data-toggle="tooltip" data-placement="top" title="Print Group" id="printG" type="submit"
+                    class="btn button printGBtn mx-1 "><iconify-icon class="qrIcon mx-1" icon="bi:printer" width="23"
+                      height="23"></iconify-icon>
+                    <p class="mb-0"></p>
+                    <div id="spinner-container5"></div>
+                  </button>
+                  <div class="form-group form-floating" style="display:none ;">
+                    <input name="Group Num" type="number" placeholder="Scholarship" id="qrCodeId" class="form-control">
+                    <label for="qrCodeId">Scholarship</label>
+                  </div>
+                  <div class="form-group form-floating" style="display:none ;">
+                    <input name="Employee" type="text" placeholder="Scholarship" id="Emp" class="form-control">
+                    <label for="Emp">Scholarship</label>
+                  </div>
+                  <div class="form-group form-floating" style="display:none ;">
+                    <input name="Timestamp" type="text" placeholder="Scholarship" id="Timestamp" class="form-control">
+                    <label for="Timestamp">Scholarship</label>
+                  </div>
+                </form>
+
+            </div>
+            <!-- <button id="openPopupButton">Add Complaint</button> -->
+            <div id="popupContainer">
+              <div id="popup">
+                <form id="myForm">
+                  <label for="inputField">Deadline :</label>
+                  <input type="text" id="Complaint" name="Complaint">
+
+
+                  <br>
+                  <input type="submit" value="Submit">
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- card of ditals -->
+
+          <!-- start cards of ditals -->
+          <div class="allCard" style="display: none;">
+            <div class="cardd">
+              <div class=" d-flex align-items-center">
+                <p style="margin-bottom: 0;"> Group Count :</p>
+                <span id="GroupCount"></span>
+              </div>
+            </div>
+            <div class="cardd">
+              <div class=" d-flex align-items-center">
+                <p style="margin-bottom: 0;">Group Time :</p>
+                <span id="GroupTime"></span>
+              </div>
+            </div>
+            <div class="cardd">
+              <div class=" d-flex align-items-center">
+                <p style="margin-bottom: 0;">GR Module Name :</p>
+                <span id="GroupModuleName"></span>
+              </div>
+            </div>
+            <div class="cardd">
+              <div class=" d-flex align-items-center">
+                <p style="margin-bottom: 0;">GR Start Date :</p>
+                <span id="GroupStartDate"></span>
+              </div>
+            </div>
+          </div>
+          <!-- end cards of ditals -->
+
+          <div class="activities p-20  rad-10 ">
+            <div class="main d-flex justify-content-around  ">
+
+            </div>
+
+            <div class="main d-flex justify-content-around mt-10  ">
+
+              <div class="card-body text-center">
+                <table class="table table-bordered groupSectionTable">
+                  <thead class="table-head-c text-light">
+                    <tr>
+                      <th scope="col">St No.</th>
+                      <th scope="col">Name</th>
+                      <!-- <th scope="col">Email</th> -->
+                      <th scope="col">Phone</th>
+                      <th scope="col">St Type</th>
+                      <th scope="col">Grade</th>
+                    </tr>
+                  </thead>
+                  <tbody class="tbodyGroup text-center">
+
+                  </tbody>
+                </table>
+              </div>
+              <!-- End Other Data -->
+              <!-- loading -->
+              <div class="loading-div">
+                <div class="loadingio-spinner-double-ring-h4svqtjo686">
+                  <div class="ldio-fm0nm98m936">
+                    <div></div>
+                    <div></div>
+                    <div>
+                      <div></div>
+                    </div>
+                    <div>
+                      <div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- End Other Data -->
+        </div>
+      </div>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"></script> -->
+
+    <script src="./bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+    <script src="./bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+
+
+    <!-- <script src="./js pages/main.js"></script> -->
+    <script src="./js pages/groupSection.js"></script>
+    <script src="/js pages/smsGroup.js"></script>
+    <script src="/js pages/EmailGroup.js"></script>
+</body>
+
+</html>

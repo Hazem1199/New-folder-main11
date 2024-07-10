@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./bootstrap-5.2.3-dist/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/brands.min.css"
+    integrity="sha512-L+sMmtHht2t5phORf0xXFdTC0rSlML1XcraLTrABli/0MMMylsJi3XA23ReVQkZ7jLkOEIMicWGItyK4CAt2Xw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/framework.css">
+  <link rel="stylesheet" href="./css/master.css">
+  <title>Dashboard</title>
+</head>
+
+<body id="body">
+
+
+
+  <div class="page ">
+    <!-- sidebar -->
+    <div class="sidebar">
+      <div class="logo_details">
+        <img class="icon" src="./imgs/bb_-_logo-removebg-preview.png" alt="brooklyn">
+        <!-- <div class="logo_name">Brooklyn</div> -->
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <a href="./SRM.html">
+            <i class="bx bx-grid-alt"></i>
+            <span class="link_name">Srm</span>
+          </a>
+          <span class="tooltip">Srm</span>
+        </li>
+        <li id="user">
+          <a href="./aiPage.html">
+            <i class="bx bx-user"></i>
+            <span class="link_name">User</span>
+          </a>
+          <span class="tooltip">User</span>
+        </li>
+        <li id="Resrevation">
+          <a href="#">
+            <i class='bx bx-user-plus'></i>
+            <span class="link_name">Resrevation</span>
+          </a>
+          <span class="tooltip">Resrevation</span>
+        </li>
+        <li>
+          <a href="/tools.html">
+            <i class='bx bx-store'></i>
+            <span class="link_name">Tools</span>
+          </a>
+          <span class="tooltip">Tools</span>
+        </li>
+        <li id="HR">
+          <a href="#">
+            <i class='bx bx-heading'></i>
+            <span class="link_name">HR</span>
+          </a>
+          <span class="tooltip">HR</span>
+        </li>
+        <li id="Group">
+          <a href="/groupSection.html">
+            <i class='bx bx-group'></i>
+            <span class="link_name">Group</span>
+          </a>
+          <span class="tooltip">Group</span>
+        </li>
+        <!-- <li id="tasks" class="nav-item dropdown">
+          <button class="nav-link btn dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="bx bx-task"></i>
+            <span class="link_name">Tasks</span>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Department tasks</a>
+            <a class="dropdown-item" href="#">Abasiya tasks</a>
+            <a class="dropdown-item" href="#">Fifth Settlement tasks</a>
+          </div>
+          <span class="tooltip">Tasks</span>
+        </li> -->
+
+        <li class="dropdown dropend">
+
+          <button class="btn nav-link dropdown-toggle taskBtn" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <a>
+              <i class="bx bx-task"></i>
+              <span class="link_name">Tasks</span>
+            </a>
+          </button>
+          <ul class="dropdown-menu w-2 " style="padding-right: 10px;">
+            <li><a style="padding: 7px; width: fit-content;" class="nav-link dropdown-item bg-light"
+                href="/task.html">Department tasks</a></li>
+            <li><a style="padding: 7px; width: fit-content;" class="nav-link dropdown-item bg-light"
+                href="/abasiyaTask.html">Abasiya tasks</a></li>
+            <li><a style="padding: 7px; width: fit-content;" class="nav-link dropdown-item bg-light"
+                href="/settelmentTask.html">Fifth Settlement tasks</a></li>
+          </ul>
+          <span class="tooltip">task</span>
+        </li>
+
+        <li class="dropdown dropend" id="project">
+
+          <button class="btn nav-link dropdown-toggle taskBtn" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <a>
+              <i class="bx bx-task"></i>
+              <span class="link_name">Tasks</span>
+            </a>
+          </button>
+          <ul class="dropdown-menu w-2 " style="padding-right: 10px;">
+            <li><a style="padding: 7px; width: fit-content;" class="nav-link dropdown-item bg-light"
+                href="/project.html">Projects</a></li>
+            <li><a style="padding: 7px; width: fit-content;" class="nav-link dropdown-item bg-light"
+                href="/oneTimeTask.html">One Time Task</a></li>
+          </ul>
+          <span class="tooltip">projects</span>
+        </li>
+
+
+        <li
+          style="position: absolute; bottom: 70PX; left: 10px; width: 75%; background-color:var(--color-second) ; border-radius: 10px;">
+
+          <button data-bs-toggle="modal" data-bs-target="#exampleModal6" type="submit" class="btn mx-1"
+            style="padding: 0; margin: 0 ;">
+            <i class='bx bx-message-rounded-dots'></i>
+            <span class="link_name"></span>
+            <span class="tooltip">Support</span>
+          </button>
+
+        </li>
+
+
+        <a href="./index.html" class="log_out">
+          <li class="profile">
+            <div class="profile_details">
+              <!-- <img src="profile.jpg" alt="profile image"> -->
+              <div class="profile_content">
+                <div class="name"></div>
+                <div class="designation"></div>
+              </div>
+            </div>
+            <i class="bx bx-log-out" id="log_out"></i>
+          </li>
+        </a>
+      </ul>
+    </div>
+
+
+    <!-- Sidebar
+    <div id="sidebar-wrapper">
+      <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+        <li class="active">
+          <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-dashboard fa-stack-1x "></i></span>
+            Dashboard</a>
+
+        </li>
+        <li>
+          <a href="#"><span class="fa-stack fa-lg pull-left"><i
+                class="fa fa-flag fa-stack-1x "></i></span>Shortcut</a>
+          <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+            <li><a href="#"><span class="fa-stack fa-lg pull-left"><i
+                    class="fa fa-flag fa-stack-1x "></i></span>link1</a></li>
+            <li><a href="#"><span class="fa-stack fa-lg pull-left"><i
+                    class="fa fa-flag fa-stack-1x "></i></span>link2</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"><span class="fa-stack fa-lg pull-left"><i
+                class="fa fa-cloud-download fa-stack-1x "></i></span>Overview</a>
+        </li>
+        <li>
+          <a href="#"> <span class="fa-stack fa-lg pull-left"><i
+                class="fa fa-cart-plus fa-stack-1x "></i></span>Events</a>
+        </li>
+        <li>
+          <a href="#"><span class="fa-stack fa-lg pull-left"><i
+                class="fa fa-youtube-play fa-stack-1x "></i></span>About</a>
+        </li>
+        <li>
+          <a href="#"><span class="fa-stack fa-lg pull-left"><i
+                class="fa fa-wrench fa-stack-1x "></i></span>Services</a>
+        </li>
+        <li>
+          <a href="#"><span class="fa-stack fa-lg pull-left"><i
+                class="fa fa-server fa-stack-1x "></i></span>Contact</a>
+        </li>
+      </ul>
+    </div> -->
+    <!-- /#sidebar-wrapper -->
+
+
+    <!-- list of sidebar -->
+    <!-- <div class="sidebar p-20 bg-white p-relative">
+      <h3 class="p-relative mt-0 txt-c">Brooklyn B.S</h3>
+      <ul>
+        <li>
+          <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="./index.html">
+            <i class="fa-solid fa-chart-bar fa-fw"></i>
+            <span class="ml-5 hide-mobile fs-14">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a class="active d-flex align-center fs-14 c-black rad-6 p-10" href="./SRM.html">
+            <i class="fa-solid fa-circle-info fa-fw"></i>
+            <span class="ml-5 hide-mobile fs-14">Srm</span>
+          </a>
+        </li>
+      </ul>
+    </div> -->
+    <div class="content  ">
+      <!--start head  -->
+
+      <div class="head bg-white d-flex">
+
+
+
+        <form class="searchCon flex-grow-1">
+          <div class="alertMsg" id="alertMsg"></div>
+          <div class="search p-relative">
+            <input style="border-radius: 40px 0px 0px 40px;" class="rad-15" type="search" id="searchInput" name="search"
+              placeholder="Write ID...." required>
+          </div>
+          <div class="search-container">
+            <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+          </div>
+        </form>
+        <!-- <button type="submit" class="btn btn-outline-primary mx-3 digitalId">Primary</button> -->
+        <!-- <button class="learn-more digitalId" ><iconify-icon icon="mingcute:faceid-fill" style="color: #0b6fa4;" width="25" height="25" flip="horizontal"></iconify-icon> Qr Code </button> -->
+
+        <!-- support modal -->
+        <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Please Fillfull All Inputs
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+
+
+                <form method="POST" id="frmSupport">
+                  <div class="form-group form-floating mb-3 frmDiv ">
+
+
+                    <div class="form-group form-floating mt-3" style="display: none;">
+                      <input name="Employee" type="text" id="SupportEmployee" class="form-control">
+                      <label for="SupportEmployee">Employee</label>
+                    </div>
+                  </div>
+
+
+
+                  <div class="form-group form-floating" style="display: none;">
+                    <input name="Timestamp" type="text" placeholder="Student Num" id="SupportTimestamp"
+                      class="form-control">
+                    <label for="SupportTimestamp">Student Num</label>
+                  </div>
+
+                  <div class="form-floating mt-3">
+                    <select class="form-select" id="SupportSelect" name="Type Of Support" required>
+                      <!-- code come from iterate -->
+                      <option selected></option>
+                      <option value="Suggestion">Suggestion</option>
+                      <option value="Complaint">Complaint</option>
+                    </select>
+                    <label for="SupportSelect">select Type Of Support</label>
+                  </div>
+
+                  <div class="form-group mt-3 form-floating">
+                    <input name="Link" class="form-control" placeholder="Nots" id="SupportLink"></input>
+                    <label for="SupportLink" class="form-label">Link &#128279; Of System . .</label>
+                  </div>
+
+                  <div class="form-group mt-3 form-floating">
+                    <input name="Name Of System" class="form-control" placeholder="Nots" id="SystemName"
+                      required></input>
+                    <label for="SupportName" class="form-label">Name Of System . .</label>
+                  </div>
+
+
+                  <div class="form-group mt-3 form-floating">
+                    <textarea name="Notes" class="form-control" placeholder="Nots" id="SupportTextarea" rows="10"
+                      required></textarea>
+                    <label for="SupportTextarea" class="form-label">Write Here . .</label>
+                  </div>
+
+
+                  <div class="my-3">
+                    <div class="error-message"></div>
+                    <div dir="ltr" class="sent-message text-center alert alert-success d-none"></div>
+
+                  </div>
+                  <div class="d-flex justify-content-center mt-3">
+                    <button class="btn btn-primary scrollto btn-info text-light d-flex SupportBtn" type="submit">
+                      Submit
+                      <div id="spinner-container6"></div>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- email btn  -->
+
+        <button disabled id="emailBtnM" data-bs-toggle="modal" data-bs-target="#exampleModal4" type="submit"
+          class="btn button mx-1"><iconify-icon style="color: #C5221F;" class="qrIcon mx-1" icon="bi:envelope"
+            width="23" height="23"></iconify-icon>
+          <p class="mb-0" style="color: black;">Email</p>
+        </button>
+
+        <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Please Fillfull All Inputs
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+
+                <form method="POST" id="frmEmail">
+                  <div class="form-group form-floating mb-3 frmDiv ">
+
+
+                    <div class="form-group form-floating mt-3" style="display:none ;">
+                      <input name="Employee" type="text" id="emailEmployee" class="form-control">
+                      <label for="emailEmployee">Employee</label>
+                    </div>
+                  </div>
+
+                  <div class="form-group form-floating" style="display:none ;">
+                    <input name="Student Num" type="number" placeholder="Student Num" id="emailStudentNum"
+                      class="form-control">
+                    <label for="emailStudentNum">Student Num</label>
+                  </div>
+
+
+                  <div class="form-group form-floating" style="display:none ;">
+                    <input name="Timestamp" type="text" placeholder="Student Num" id="emailTimestamp"
+                      class="form-control">
+                    <label for="emailTimestamp">Student Num</label>
+                  </div>
+
+                  <div class="form-floating mt-3">
+                    <select class="form-select" id="EmailSelect">
+                      <!-- code come from iterate -->
+                      <option selected></option>
+                      <option value="call me">call me </option>
+                    </select>
+                    <label for="EmailSelect">select Email</label>
+                  </div>
+
+                  <div class="form-group mt-3 form-floating">
+                    <input name="Subject" class="form-control" placeholder="Nots" id="EmailSubject" rows="10"
+                      required></input>
+                    <label for="EmailSubject" class="form-label">Subject</label>
+                  </div>
+
+
+                  <div class="form-group mt-3 form-floating">
+                    <textarea name="Email" class="form-control" placeholder="Nots" id="EmailTextarea" rows="10"
+                      required></textarea>
+                    <label for="EmailTextarea" class="form-label">Email</label>
+                  </div>
+
+
+                  <div class="my-3">
+                    <div class="error-message"></div>
+                    <div dir="ltr" class="sent-message text-center alert alert-success d-none" id="msg"></div>
+
+                  </div>
+                  <div class="d-flex justify-content-center mt-3">
+                    <button class="btn btn-primary scrollto btn-info text-light d-flex emailBtn" type="submit">
+                      Submit
+                      <div id="spinner-container4"></div>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- sms btn  -->
+        <button disabled id="smsBtnM" data-bs-toggle="modal" data-bs-target="#exampleModal2" type="submit"
+          class="btn button mx-1"><iconify-icon class="qrIcon mx-1 text-success" icon="bi:chat-square-text" width="23"
+            height="23"></iconify-icon>
+          <p class="mb-0" style="color: black;">SMS</p>
+        </button>
+
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Please Fillfull All Inputs
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+
+                <form method="POST" id="frmSms">
+                  <div class="form-group form-floating mb-3 frmDiv ">
+
+
+                    <div class="form-group form-floating mt-3" style="display:none ;">
+                      <input name="Employee" type="text" id="smsEmployee" class="form-control">
+                      <label for="smsEmployee">Employee</label>
+                    </div>
+                  </div>
+
+                  <div class="form-group form-floating" style="display:none ;">
+                    <input name="Student Num" type="number" placeholder="Student Num" id="smsStudentNum"
+                      class="form-control">
+                    <label for="smsStudentNum">Student Num</label>
+                  </div>
+
+
+                  <div class="form-group form-floating" style="display:none ;">
+                    <input name="Timestamp" type="text" placeholder="Student Num" id="smsTimestamp"
+                      class="form-control">
+                    <label for="smsTimestamp">Student Nu m</label>
+                  </div>
+
+                  <div class="form-floating mt-3">
+                    <select class="form-select" id="SmsSelect">
+                      <!-- code come from iterate -->
+                      <option selected></option>
+                      <option value="call me">call me </option>
+                    </select>
+                    <label for="SmsSelect">select Sms</label>
+                  </div>
+
+
+                  <div class="form-group mt-3 form-floating">
+                    <textarea name="Sms" class="form-control" placeholder="Nots" id="smsTextarea" rows="10"
+                      required></textarea>
+                    <label for="smsTextarea" class="form-label">Write Sms</label>
+                  </div>
+
+
+                  <div class="my-3">
+                    <div class="error-message"></div>
+                    <div dir="ltr" class="sent-message text-center alert alert-success d-none"></div>
+
+                  </div>
+                  <div class="d-flex justify-content-center mt-3">
+                    <button class="btn btn-primary scrollto btn-info text-light d-flex smsBtn" type="submit">
+                      Submit
+                      <div id="spinner-container3"></div>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- online share btn  -->
+        <button disabled data-bs-toggle="modal" data-bs-target="#exampleModal1" type="submit" id="onlineShareBtn"
+          class="btn button  mx-1"><iconify-icon class="qrIcon mx-1" icon="bi:share" width="23"
+            height="23"></iconify-icon>
+          <p class="mb-0">Online Share</p>
+        </button>
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Please Fillfull All Inputs
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+
+                <form method="POST" id="frmOnlineShare">
+                  <div class="form-group form-floating mb-3 frmDiv ">
+
+                    <div class="form-floating mt-3">
+                      <select class="form-select" id="emailSelect" name="Email" required>
+                        <!-- code come from iterate -->
+                      </select>
+                      <label for="emailSelect">select Email</label>
+                    </div>
+
+                    <div class="form-floating mt-3">
+                      <select class="form-select" id="ModuleSelect" name="Module" required>
+                        <!-- code come from iterate -->
+                        <option selected>Please select</option>
+                      </select>
+                      <label for="ModuleSelect">select Module</label>
+                    </div>
+
+                    <div class="form-group form-floating mt-3">
+                      <input name="Module Code" type="text" id="ModuleCodeSelect" class="form-control" required>
+                      <label for="ModuleCodeSelect">Module Code</label>
+                    </div>
+
+                    <div class="form-group mt-3 form-floating">
+                      <textarea name="share reason" class="form-control" placeholder="Nots" id="Textarea" rows="5"
+                        required></textarea>
+                      <label for="Textarea" class="form-label">Share Reason</label>
+                    </div>
+
+                    <div class="form-group form-floating mt-3" style="display:none ;">
+                      <input name="Employee" type="text" id="Employeeshare" class="form-control">
+                      <label for="Employeeshare">Employee</label>
+                    </div>
+                  </div>
+
+                  <div class="form-group form-floating" style="display:none;">
+                    <input name="Student Num" type="number" placeholder="Student Num" id="StudentNum"
+                      class="form-control">
+                    <label for="StudentNum">Student Num</label>
+                  </div>
+
+
+
+                  <div class="form-group form-floating" style="display:none ;">
+                    <input name="Timestamp" type="text" placeholder="Student Num" id="Timestamp3" class="form-control">
+                    <label for="Timestamp3">Student Nu m</label>
+                  </div>
+
+                  <div class="form-group form-floating" style="display:none ;">
+                    <input name="End Share Date" type="text" placeholder="Student Num" id="EndShareDate"
+                      class="form-control">
+                    <label for="EndShareDate">Student Nu m</label>
+                  </div>
+
+                  <div>
+                    <h4 class="ShareEnd"></h4>
+                  </div>
+
+
+                  <div class="my-3">
+                    <div class="error-message"></div>
+                    <div dir="ltr" class="sent-message text-center alert alert-success d-none" id="msg"></div>
+
+                  </div>
+                  <div class="d-flex justify-content-center mt-3">
+                    <button class="btn btn-primary scrollto btn-info text-light d-flex shareSubmit" id="btnSubmit"
+                      type="submit">
+                      Submit
+                      <div id="spinner-container2"></div>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form method="POST" id="digitalId">
+          <button disabled id="digitalId" type="submit" class="btn button digitalIdBtn mx-1"><iconify-icon
+              style="color: black;" class="qrIcon mx-1" icon="bi:qr-code" width="23" height="23"></iconify-icon>
+            <p class="mb-0">QR</p>
+            <div id="spinner-container5"></div>
+          </button>
+
+          <div class="form-group form-floating" style="display:none ;">
+            <input name="ID" type="number" placeholder="Scholarship" id="qrCodeId" class="form-control">
+            <label for="qrCodeId">Scholarship</label>
+          </div>
+          <div class="form-group form-floating" style="display:none ;">
+            <input name="Employee" type="text" placeholder="Scholarship" id="Emp" class="form-control">
+            <label for="Emp">Scholarship</label>
+          </div>
+          <div class="form-group form-floating" style="display:none ;">
+            <input name="Timestamp" type="text" placeholder="Scholarship" id="Timestamp" class="form-control">
+            <label for="Timestamp">Scholarship</label>
+          </div>
+        </form>
+
+        <form method="POST" id="App">
+          <button disabled id="App" type="submit" class="btn button appBtn mx-2"><iconify-icon class="qrIcon mx-1"
+              style="color: #F1B708;" icon="ic:twotone-app-shortcut" width="23" height="23"></iconify-icon>
+            <p class="mb-0">App</p>
+            <div id="spinner-container1"></div>
+          </button>
+
+          <div class="form-group form-floating" style="display:none ;">
+            <input name="ID" type="number" placeholder="Scholarship" id="appId" class="form-control">
+            <label for="appId">Scholarship</label>
+          </div>
+          <div class="form-group form-floating" style="display:none ;">
+            <input name="Employee" type="text" placeholder="Scholarship" id="Emp1" class="form-control">
+            <label for="Emp1">Scholarship</label>
+          </div>
+          <div class="form-group form-floating" style="display:none ;">
+            <input name="Timestamp" type="text" placeholder="Scholarship" id="Timestamp1" class="form-control">
+            <label for="Timestamp1">Scholarship</label>
+          </div>
+        </form>
+        <div>
+          <!-- <img style="width: 60px;" src="./imgs/1615473689936.jfif" alt="" srcset=""> -->
+        </div>
+        <div class="icons d-flex align-center">
+          <span class="notification p-relative">
+            <i class="fa-regular fa-bell fa-lg"></i>
+          </span>
+          <img src="./imgs/IMG_8222.png" alt="person">
+        </div>
+      </div>
+      <!-- <h1 class="p-relative">Profile</h1> -->
+
+
+
+      <div class="section">
+        <div class="Welcome mt-10 ">Welcome </div>
+        <div class="section2" style="display: flex;">
+          <div class="alertMessage"></div>
+        </div>
+        <div class="profile-page  ">
+
+          <!-- Start Overview -->
+          <div class="overview bg-white rad-10 d-flex align-center">
+            <div class="avatar-box txt-c p-20">
+              <!-- <iframe id="profile-pic" class="circle-container"  src="" frameborder="0" scrolling="no"   ></iframe> -->
+              <img id="profile-pic" class="rad-half mb-10" src="" alt="" />
+              <h5 class="m-0 headName"></h5>
+              <p class="c-grey mt-10" id="level"></p>
+              <div class="level rad-6 bg-eee p-relative">
+                <span id="progress-bar"></span>
+              </div>
+              <!-- cancel btn -->
+
+
+              <div dis. style="display: flex; justify-content: center;">
+                <button disabled id="cancel" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal7"
+                  class="btn button mx-1 mt-2"><iconify-icon style="color: red;" class="qrIcon mx-1" icon="bi:x-circle"
+                    width="23" height="23"></iconify-icon>
+                  <p class="mb-0">Cancel</p>
+                  <!-- <div id="spinner-container"></div> -->
+                </button>
+              </div>
+
+              <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Please Write Your Reason
+                      </h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                      <form method="POST" id="frmCancel">
+                        <div class="form-group form-floating mb-3 frmDiv ">
+
+
+                          <div class="form-group form-floating mt-3" style="display:none ;">
+                            <input name="Employee" type="text" id="Empcancel" class="form-control">
+                            <label for="smsEmployee">Employee</label>
+                          </div>
+                        </div>
+
+
+                        <div class="form-group form-floating" style="display:none ;">
+                          <input name="Timestamp" type="text" placeholder="Scholarship" id="cancelTimestamp"
+                            class="form-control">
+                          <label for="Timestamp">Scholarship</label>
+                        </div>
+
+
+                        <div class="form-group form-floating" style="display:none ;">
+                          <input name="Student Num" type="number" placeholder="Scholarship" id="cancelId"
+                            class="form-control">
+                          <label for="qrCodeId">Scholarship</label>
+                        </div>
+
+
+                        <div class="form-group mt-3 form-floating">
+                          <textarea name="Cancel Reason" class="form-control" placeholder="Nots" id="CancelReason"
+                            rows="10" required></textarea>
+                          <label for="CancelReason" class="form-label">Write Reasons</label>
+                        </div>
+
+
+                        <div class="my-3">
+                          <div class="error-message"></div>
+                          <div dir="ltr" class="sent-message text-center alert alert-success d-none"></div>
+
+                        </div>
+                        <div class="d-flex justify-content-center mt-3">
+                          <button class="btn btn-primary scrollto btn-info text-light d-flex cancelBtn" type="submit">
+                            Submit
+                            <div id="spinner-container7"></div>
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- <form method="POST" id="cancel" style="display: flex; justify-content: center;">
+                <button disabled id="cancel" type="submit" class="btn button cancelBtn mx-1 mt-2"><iconify-icon
+                    style="color: red;" class="qrIcon mx-1" icon="bi:x-circle" width="23" height="23"></iconify-icon>
+                  <p class="mb-0" style="color: red;">Cancel</p>
+                  <div id="spinner-container"></div>
+                </button>
+
+                <div class="form-group form-floating" style="display:none ;">
+                  <input name="Student Num" type="number" placeholder="Scholarship" id="cancelId" class="form-control">
+                  <label for="qrCodeId">Scholarship</label>
+                </div>
+                <div class="form-group form-floating" style="display:none ;">
+                  <input name="Employee" type="text" placeholder="Scholarship" id="Empcancel" class="form-control">
+                  <label for="Emp">Scholarship</label>
+                </div>
+                <div class="form-group form-floating" style="display:none ;">
+                  <input name="Timestamp" type="text" placeholder="Scholarship" id="cancelTimestamp"
+                    class="form-control">
+                  <label for="Timestamp">Scholarship</label>
+                </div>
+              </form> -->
+              <!-- <div class="rating mt-10 mb-10">
+              <i class="fa-solid fa-star c-orange fs-13"></i>
+              <i class="fa-solid fa-star c-orange fs-13"></i>
+              <i class="fa-solid fa-star c-orange fs-13"></i>
+              <i class="fa-solid fa-star c-orange fs-13"></i>
+              <i class="fa-solid fa-star c-orange fs-13"></i>
+            </div> -->
+            </div>
+
+
+
+            <div class="info-box w-full txt-c-mobile">
+              <!-- Start Information Row -->
+              <div class="box p-20 d-flex align-center" style="justify-content: space-around;">
+                <h4 class="c-grey fs-15 m-0 w-full">General & Personal Information</h4>
+
+                <div class="d-flex">
+                  <div class="space-between">
+                    <div class="fs-14 pb-10" id="FN">
+                      <span class="c-grey">Full Name:</span>
+                      <span class="fName"> </span>
+                    </div>
+                    <div class="fs-14 pb-10">
+                      <span class="c-grey">Student No:</span>
+                      <span class="ID"> </span>
+                    </div>
+                    <div class="fs-14 pb-10">
+                      <span class="c-grey">Email:</span>
+                      <span class="Email"></span>
+
+                      <a href="" class="more-btn more" type="button" data-bs-toggle="modal" style="display: none;"
+                        data-bs-target="#exampleModal">more..</a>
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content" style="width:fit-content;">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel">Emails</h1>
+                              <!-- <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                  aria-label="Close"></button> -->
+                            </div>
+                            <div class="modal-body email-crd">
+                              ...
+                            </div>
+                            <!--<div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button> 
+                              </div>-->
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <div style="min-height: 120px; display: none; z-index: 1" class="email-crd">
+                          <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                            <div class="card card-body " style="width: 300px;"> </div>
+                          </div>
+                        </div> -->
+
+                    </div>
+                    <div class="fs-14 pb-10 CancelReasonDiv">
+                      <span class="c-grey">Cancel Reason:</span>
+                      <span class="CancelReason"> </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-flex">
+                  <div class="space-between">
+                    <div class="fs-14 pb-10">
+                      <span class="c-grey">Career :</span>
+                      <span class="Career"> </span>
+                    </div>
+                    <div class="fs-14 pb-10">
+                      <span class="c-grey ">Study Type :</span>
+                      <span class="StudyType"></span>
+                    </div>
+                    <div class="fs-14 pb-10">
+                      <span class="c-grey">Phone:</span>
+                      <span class="Phone"></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-flex">
+                  <div class="space-between">
+
+                    <div class="fs-14 pb-10">
+                      <span class="c-grey">Date Of Birth:</span>
+                      <span class="DOB"></span>
+                    </div>
+                    <div class="fs-14 pb-10">
+                      <span class="c-grey ">ID Number:</span>
+                      <span class="IdNumber"></span>
+                    </div>
+                    <div class="fs-14 pb-10 CancelDateDiv">
+                      <span class="c-grey ">Cancel Date:</span>
+                      <span class="CancelDate"></span>
+                    </div>
+
+
+                  </div>
+                </div>
+
+
+                <div class="d-flex">
+                  <div class="space-between">
+
+
+                  </div>
+                </div>
+                <!-- <div class="fs-14">
+                <label>
+                  <input class="toggle-checkbox" type="checkbox" checked />
+                  <div class="toggle-switch"></div>
+                </label>
+              </div> -->
+              </div>
+              <!-- loading -->
+              <div class="loading-div">
+                <div class="loadingio-spinner-double-ring-h4svqtjo686">
+                  <div class="ldio-fm0nm98m936">
+                    <div></div>
+                    <div></div>
+                    <div>
+                      <div></div>
+                    </div>
+                    <div>
+                      <div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+              <!-- End Information Row -->
+              <!-- Start Information Row -->
+              <!-- <div class="box p-20 d-flex align-center">
+              <h4 class="c-grey w-full fs-15 m-0">Personal Information</h4> -->
+
+              <!-- <div class="fs-14">
+                <label>
+                  <input class="toggle-checkbox" type="checkbox" />
+                  <div class="toggle-switch"></div>
+                </label>
+              </div> -->
+              <!-- </div> -->
+              <!-- End Information Row -->
+              <!-- Start Information Row -->
+              <div class="box p-20 d-flex align-center" style="justify-content: space-around;">
+                <h4 class="c-grey w-full fs-15 m-0">Scolarship & Reserv Information</h4>
+                <div class="fs-14">
+                  <span class="c-grey">Reservation Date:</span>
+                  <span class="ReservationDate"></span>
+                </div>
+                <div class="fs-14">
+                  <span class="c-grey">Grade: </span>
+                  <span class="Grade"></span>
+                </div>
+                <div class="fs-14">
+                  <span class="c-grey">Scholarship: </span>
+                  <span class="Scholarship"></span>
+                </div>
+                <div class="fs-14">
+                  <span class="c-grey">Receptionist: </span>
+                  <span class="Receptionist"></span>
+                </div>
+                <div class="fs-14">
+                  <span class="c-grey">Reserver: </span>
+                  <span class="Reserver"></span>
+                </div>
+                <div class="fs-14">
+                  <span class="c-grey">CC Agent: </span>
+                  <span class="CCAgent"></span>
+                </div>
+                <!-- <div class="fs-14">
+                <label>
+                  <input class="toggle-checkbox" type="checkbox" checked />
+                  <div class="toggle-switch"></div>
+                </label>
+              </div> -->
+              </div>
+              <!-- End Information Row -->
+              <!-- Start Information Row -->
+              <!--<div class="box p-20 d-flex align-center">
+               <h4 class="c-grey w-full fs-15 m-0">Reserv Information</h4> -->
+
+              <!-- <div class="fs-14">
+                <label>
+                  <input class="toggle-checkbox" type="checkbox" />
+                  <div class="toggle-switch"></div>
+                </label>
+              </div>
+            </div> -->
+              <!-- End Information Row -->
+            </div>
+          </div>
+          <!-- End Overview -->
+          <!-- Start Other Data -->
+          <div class="other-data  gap-20 ">
+            <div class="skills-card bg-blue rad-10">
+              <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav">
+                <div class="container">
+                  <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html"></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation"><span
+                      class="navbar-toggler-icon"></span></button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto justify-content-center">
+                      <li class="nav-item px-lg-4"><a class="nav-link text-uppercase homeBtn" href="./SRM.html">Home</a>
+                      </li>
+                      <li class="nav-item px-lg-4"><a class="nav-link text-uppercase invoiceBtn "
+                          href="./invoice.html">Invoice</a></li>
+                      <!-- <li class="nav-item px-lg-4"><a class="nav-link text-uppercase invoiceBtn "
+                          href="./Action.html">Actions</a></li> -->
+                      <!-- <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="#">Products</a></li> -->
+                      <!-- <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="#">Store</a></li> -->
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+
+              <!-- list of sidebar -->
+              <!-- <ul class="d-flex m-0">
+              <li>
+                <a class=" d-flex align-center fs-14 c-black rad-6 p-10 c-white" href="Request.html">
+                  <span class="ml-5 hide-mobile fs-14">Requests</span>
+                </a>
+              </li>
+              <li>
+                <a class=" d-flex align-center fs-14 c-black rad-6 p-10 c-white" href="Complaint.html">
+                  <span class="ml-5 hide-mobile fs-14">Complaint</span>
+                </a>
+              </li>
+              <li>
+                <a class=" d-flex align-center fs-14 c-black rad-6 p-10 c-white" href="Deadlines.html">
+                  <span class="ml-5 hide-mobile fs-14">Deadlines</span>
+                </a>
+              </li>
+              <li>
+                <a class=" d-flex align-center fs-14 c-black rad-6 p-10 c-white" href="Attendance.html">
+                  <span class="ml-5 hide-mobile fs-14">Attendance</span>
+                </a>
+              </li>
+              <li>
+                <a class=" d-flex align-center fs-14 c-black rad-6 p-10 c-white" href="Group.html">
+                  <span class="ml-5 hide-mobile fs-14">Groups</span>
+                </a>
+              </li>
+            </ul> -->
+
+
+            </div>
+            <!-- mini cards -->
+            <div class="mt-20 row">
+
+              <a href="" class="seeMore1 col-lg-4 mb-3">
+                <div class="card cards">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="./imgs/request.png" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body pl-0">
+                        <p class="card-text text-center"><small class="text-muted">Requests</small></p>
+                        <div class="d-flex justify-content-center align-items-center">
+                          <div id="spinner2" class="spinner-border text-primary spinner-border-sm" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                          </div>
+                        </div>
+                        <p class="card-text text-center fs-3 fw-bold num-request Requestss"> </p>
+                      </div>
+                    </div>
+                    <!-- <div class="p-6 card-footer footer1 text-muted text-center"></div> -->
+                  </div>
+                </div>
+              </a>
+
+              <a href="" class="seeMore2 col-lg-4 mb-3">
+                <div class="card cards">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="./imgs/complain.png" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body pl-0">
+                        <p class="card-text text-center"><small class="text-muted">Complaint</small></p>
+                        <div class="d-flex justify-content-center align-items-center">
+                          <div id="spinner1" class="spinner-border text-primary spinner-border-sm" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                          </div>
+                        </div>
+                        <p class="card-text text-center fs-3 fw-bold num-complaint Complaintss"> </p>
+                      </div>
+                    </div>
+                    <!-- <div class="p-6 card-footer footer2 text-muted text-center"></div> -->
+                  </div>
+                </div>
+              </a>
+              <a href="" class="seeMore3 col-lg-4 mb-3">
+                <div class="card cards">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="./imgs/money.png" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body pl-0">
+                        <p class="card-text text-center"><small class="text-muted">Deadlines</small></p>
+                        <div class="d-flex justify-content-center align-items-center">
+                          <div id="spinner3" class="spinner-border text-primary spinner-border-sm" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                          </div>
+                        </div>
+                        <p class="card-text text-center fs-3 fw-bold num-deadline Payments"> </p>
+                      </div>
+                    </div>
+                    <!-- <div class="p-6 card-footer footer3 text-muted text-center"></div> -->
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="mt-20 row">
+              <div class="col-lg-6 mb-3">
+                <a href="" class="seeMore4">
+                  <div class="card cards">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="./imgs/projectss.png" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body pl-0">
+                          <p class="card-text text-center"><small class="text-muted">Training plan</small></p>
+                          <div class="d-flex justify-content-center align-items-center">
+                            <div id="spinner4" class="spinner-border text-primary spinner-border-sm" role="status">
+                              <span class="visually-hidden">Loading...</span>
+                            </div>
+                          </div>
+                          <p class="card-text text-center fs-3 fw-bold num-module Schadule" id="moduleCount"></p>
+                        </div>
+                      </div>
+                      <!-- <div class="p-6 card-footer footer4 text-muted text-center"></div> -->
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-6 mb-3">
+                <a class="seeMore5">
+                  <div class="card cards">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="./imgs/paper.png" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body pl-0">
+                          <p class="card-text text-center"><small class="text-muted">Papers</small></p>
+
+                          <div class="d-flex justify-content-center align-items-center">
+                            <div id="spinner" class="spinner-border text-primary spinner-border-sm" role="status">
+                              <span class="visually-hidden">Loading...</span>
+                            </div>
+                          </div>
+
+                          <p class="card-text text-center fs-3 fw-bold num-Papers Papers" id="paperCount"></p>
+                        </div>
+                      </div>
+                      <!-- <div class="p-6 card-footer footer5 text-muted text-center"></div> -->
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- <div class="col-lg-4 mb-3">
+                <div class="card cards">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="./imgs/request.png" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body pl-0">
+                        <p class="card-text text-center"><small class="text-muted">Requests</small></p>
+                        <p class="card-text text-center fs-3 fw-bold num-request"> </p>
+                      </div>
+                    </div>
+                    <div class="p-6 card-footer footer1 text-muted text-center"></div>
+                  </div>
+                </div>
+              </div>-->
+
+            <!-- card of ditals -->
+
+            <div class="activities p-20  rad-10 ">
+              <!-- <div class="main d-flex justify-content-around  ">
+                
+              </div>
+              <div class="main d-flex justify-content-around  ">
+                <div class="card text-center flex-fill ">
+                  <div class="card-header">Last Request</div>
+                  <div class="card-body">
+                    <p class="card-text text1"></p>
+                    <a href="" class="btn btn-primary seeMore1">See More</a>
+                  </div>
+                  <div class="card-footer footer1 text-muted"></div>
+                </div> -->
+              <!-- <div class="card text-center flex-fill">
+                  <div class="card-header"> Last Complaint </div>
+                  <div class="card-body">
+                    <p class="card-text text2"></p>
+                    <a href="" class="btn btn-primary seeMore2">See More</a>
+                  </div>
+                  <div class="card-footer footer2 text-muted"></div>
+                </div>
+              </div> -->
+              <!-- <div class="main d-flex justify-content-around mt-10  ">
+                <div class="card text-center flex-fill ">
+                  <div class="card-header"> Deadlines</div>
+                  <div class="card-body">
+                    <table class="table table-bordered table-striped">
+                      <thead class="table-head-c text-light">
+                        <tr>
+                          <th scope="col">Due Date</th>
+                          <th scope="col">Amount</th>
+                          <th scope="col">Status</th>
+                        </tr>
+                      </thead>
+                      <tbody class="tbody1">
+                      </tbody>
+                    </table> -->
+              <!-- <div class="divTable paleBlueRows ">
+                <div class="divTableHeading txt-c-mobile">
+                  <div class="divTableRow">
+                    <div class="divTableHead">Due Date</div>
+                    <div class="divTableHead">Amount</div>
+                    <div class="divTableHead">Status</div>
+                  </div>
+                </div>
+                <div class="divTableBody">
+                  <div class="divTableRow">
+                  </div>
+                </div>
+              </div> 
+              <a href="" class="btn btn-primary seeMore3 m-20">Details For Student Payments</a>
+            </div>
+          </div>-->
+              <!-- <div class="card text-center flex-fill ">
+            <div class="card-header">Modules </div>
+            <div class="card-body">
+              <table class="table table-bordered table-striped">
+                <thead class="table-head-c text-light">
+                  <tr>
+                    <th scope="col">Group</th>
+                    <th scope="col">Module</th>
+                    <th scope="col">Date</th>
+                  </tr>
+                </thead>
+                <tbody class="tbody2">
+          
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th colspan="3" class="text-right">Total modules: <span ></span></th>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div> -->
+              <!-- <div class="divTable paleBlueRows ">
+                <div class="divTableHe ading txt-c-mobile">
+                  <div class="divTableRow">
+                    <div class="divTableHead">Group</div>
+                    <div class="divTableHead">Module</div>
+                  </div>
+                </div>
+                <div class="divTableBody2">
+                  <div class="divTableRow">
+
+                  </div>
+                </div>
+              </div> -->
+              <!-- <a href="" class="btn btn-primary seeMore4 m-20">More Details</a>
+                  </div> -->
+
+              <!-- <div class="activity d-flex align-center txt-c-mobile">
+              <img src="imgs/activity-01.png" alt="" />
+              <div class="info">
+                <span class="d-block mb-10">Store</span>
+                <span class="c-grey">Bought The Mastering Python Course</span>
+              </div>
+              <div class="date">
+                <span class="d-block mb-10">18:10</span>
+                <span class="c-grey">Yesterday</span>
+              </div>
+            <div class="activity d-flex align-center txt-c-mobile">
+              <img src="imgs/activity-02.png" alt="" />
+              <div class="info">
+                <span class="d-block mb-10">Academy</span>
+                <span class="c-grey">Got The PHP Certificate</span>
+              </div>
+              <div class="date">
+                <span class="d-block mb-10">16:05</span>
+                <span class="c-grey">Yesterday</span>
+              </div>
+            </div>
+            <div class="activity d-flex align-center txt-c-mobile">
+              <img src="imgs/activity-03.png" alt="" />
+              <div class="info">
+                <span class="d-block mb-10">Badges</span>
+                <span class="c-grey">Unlocked The 10 Skills Badge</span>
+              </div>
+              <div class="date">
+                <span class="d-block mb-10">18:05</span>
+                <span class="c-grey">Yesterday</span>
+              </div>
+            </div>
+            <div class="activity d-flex align-center txt-c-mobile">
+              <img src="imgs/activity-01.png" alt="" />
+              <div class="info">
+                <span class="d-block mb-10">Store</span>
+                <span class="c-grey">Bought The Typescript Course</span>
+              </div>
+              <div class="date">
+                <span class="d-block mb-10">12:05</span>
+                <span class="c-grey">Yesterday</span>
+              </div>
+            </div> -->
+            </div>
+          </div>
+          <!-- End Other Data -->
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  </div>
+  </div>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+    crossorigin="anonymous"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script> -->
+
+  <script src="./bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
+
+  <!-- chat ai -->
+  <!-- <div class="align-self-end">
+    <script>
+      window.embeddedChatbotConfig = {
+        chatbotId: "_u4zKZF3nyljTVqjmHn9i",
+        domain: "www.chatbase.co"
+      }
+    </script>
+    <script src="https://www.chatbase.co/embed.min.js" chatbotId="_u4zKZF3nyljTVqjmHn9i" domain="www.chatbase.co" defer>
+    </script>
+  </div> -->
+  <!-- <script>
+    // Log a message to the browser console
+    function logMessage(message) {
+      console.log(message);
+    }
+
+    // Example: Log a user click event
+    document.addEventListener('click', function(event) {
+      logMessage('User clicked at coordinates: ' + event.currentTarget);
+    });
+
+    // Example: Log a page load event
+    window.addEventListener('load', function() {
+      logMessage('Page loaded');
+    });
+  </script> -->
+
+  <script src="./js pages/main.js"></script>
+  <script src="/js pages/sms.js"></script>
+  <script src="/js pages/Email.js"></script>
+  <script src="/js pages/Support.js"></script>
+  <!-- <script src="/js pages/onlineShare.js"></script> -->
+  <script src="/js pages/cancel.js"></script>
+  <script src="./js pages/req-card.js"></script>
+  <script src="./js pages/com-card.js"></script>
+  <script src="./js pages/deadlines-card.js"></script>
+  <script src="./js pages/group-card.js"></script>
+  <script src="./js pages/paper-card.js"></script>
+</body>
+
+</html>
